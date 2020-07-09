@@ -54,7 +54,7 @@ Get All products belonging to a given category ID
 """
 @bp.route("/products/categories/<category_id>")
 def products_by_categoryId(category_id):
-    products = Product.query.filter_by(id=category_id).all()
+    products = Product.query.filter_by(category_id=category_id).all()
     products_data = [product.serialize for product in products]
 
     categories = Category.query.all()
