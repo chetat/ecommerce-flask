@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{%block content%}
+<div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+        <h3 class="my-4">Categories</h3>
+        <div class="list-group">
+            <div class="list-group">
+                {% for category in categories%}
+                    {%if category.id == product.category_id%}
+                        <a href="{{url_for('bp.products_by_categoryId', category_id=category.id)}}" class="list-group-item active">{{category.name}}</a>
+                    {% else %}
+                        <a href="{{url_for('bp.products_by_categoryId', category_id=category.id)}}" class="list-group-item">{{category.name}}</a>
+                    {% endif %}
+                {% endfor %}
+              </div>
+        </div>
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-6">
+
+        <div class="card mt-4">
+          <img class="card-img-top img-fluid" src="{{product.image_url}}" alt="">
+          <div class="card-body">
+            <h3 class="card-title">{{product.name}}</h3>
+            <h4>${{product.price}}</h4>
+            <p class="card-text">{{product.description}}</p>
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-lg-3 mt-4">
+        Quantity
+        <input type="number" id="item-qty" class="form-control text-center" value=0>
+        <button data-prod_id={{product.id}} id="add-to-cart" class="mt-2 btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i>
+            Add To Basket</button>
+            <br>
+        <p style="display: none;" id="success-msg">Product Added</p>
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+
+  </div>
+
+<!-- /.container -->
+<footer class="py-5 mt-5 footer">
+    <div class="container">
+      <p class="m-0 text-center">Copyright © Luxe Beauty 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+{%endblock%}

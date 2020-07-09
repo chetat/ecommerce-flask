@@ -1,0 +1,11 @@
+.footer {
+    background-color: rgb(217, 145, 235);
+}
+
+.Product-img img{
+	width: 100%;
+}
+.main-section{
+	font-family: 'Roboto Condensed', sans-serif;
+	margin-top:100px;
+}

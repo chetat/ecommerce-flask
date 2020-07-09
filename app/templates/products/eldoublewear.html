@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Luxe Beauty">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Required Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Luxe Beauty">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <!-- Bootstrap Required Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <title>Luxe Beauty</title>
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+            
+            <style type="text/css">
+              /* Background image */
+               .jumbotron{
+                   margin-top: 60px;
+                   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT88EskTcsxpnOiluh9jkMN4ykfmn71C4N3Bg&usqp=CAU);
+                   background-size: cover;
+                   color: rgb(253, 253, 253);
+                   text-align: center;
+                   font-weight: bold;
+                   font-size: 60px;
+                   padding-top: 7rem;
+                   padding-bottom: 7rem;
+                   position: relative;
+                   z-index: -2;
+                }
+              /* Product Info globals*/
+              body {
+              font-family: 'open sans';
+              overflow-x: hidden; }
+
+              img {
+              max-width: 100%; }
+
+              .preview {
+            display: -webkit-box;
+            display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column; }
+          @media screen and (max-width: 996px) {
+            .preview {
+              margin-bottom: 20px; } }
+
+        .preview-pic {
+          -webkit-box-flex: 1;
+          -webkit-flex-grow: 1;
+              -ms-flex-positive: 1;
+                  flex-grow: 1; }
+
+        .preview-thumbnail.nav-tabs {
+          border: none;
+          margin-top: 15px; }
+          .preview-thumbnail.nav-tabs li {
+            width: 18%;
+            margin-right: 2.5%; }
+            .preview-thumbnail.nav-tabs li img {
+              max-width: 100%;
+              display: block; }
+            .preview-thumbnail.nav-tabs li a {
+              padding: 0;
+              margin: 0; }
+            .preview-thumbnail.nav-tabs li:last-of-type {
+              margin-right: 0; }
+
+        .tab-content {
+          overflow: hidden; }
+          .tab-content img {
+            width: 100%;
+            -webkit-animation-name: opacity;
+                    animation-name: opacity;
+            -webkit-animation-duration: .3s;
+                    animation-duration: .3s; }
+
+        .card {
+          margin-top: 50px;
+          background: #eee;
+          padding: 3em;
+          line-height: 1.5em; }
+
+        @media screen and (min-width: 997px) {
+          .wrapper {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex; } }
+
+        .details {
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+              -ms-flex-direction: column;
+                  flex-direction: column; }
+
+        .colors {
+          -webkit-box-flex: 1;
+          -webkit-flex-grow: 1;
+              -ms-flex-positive: 1;
+                  flex-grow: 1; }
+
+        .product-title, .price, .sizes, .colors {
+        text-transform: UPPERCASE;
+        font-weight: bold; }
+
+      .checked, .price span {
+        color: #fc69fc; }
+
+      .product-title, .rating, .product-description, .price, .sizes, .vote{
+        margin-bottom: 15px; }
+
+      .product-title {
+        margin-top: 0; }
+
+        .size {
+        margin-right: 10px; }
+        .size:first-of-type {
+          margin-left: 40px; }
+
+      .color {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      height: 2em;
+      width: 2em;
+      border-radius: 2px; }
+      .color:first-of-type {
+        margin-left: 20px; }
+
+    .add-to-cart{
+      background: #fc69fc;
+      padding: 1.2em 1.5em;
+      border: none;
+      text-transform: UPPERCASE;
+      font-weight: bold;
+      color: #fff;
+      -webkit-transition: background .3s ease;
+              transition: background .3s ease; }
+      .add-to-cart:hover{
+        background: #fc69fc;
+        color: #fff; }
+
+    .not-available {
+      text-align: center;
+      line-height: 2em; }
+      .not-available:before {
+        font-family: fontawesome;
+        content: "\f00d";
+        color: #fff; }
+
+.Fair {
+  background: #fcdeb5c9; }
+
+.Medium {
+  background: #bd9243; }
+
+.Tan {
+  background: #815006; }
+
+.tooltip-inner {
+  padding: 1.3em; }
+
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(3);
+            transform: scale(3); }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+
+            </style>
+    </head>
+    
+    <body>
+    
+        <!-- Contains the heading, navigation and banner image -->
+        <header>
+            <nav class="navbar navbar-expand-lg navbar navbar-light" style="background-color: rgb(217, 145, 235);">
+                <div class="container">
+    
+                    <!-- Luxe Beauty Name -->
+                    <a href="#" class="navbar-brand text-light">
+                        Luxe Beauty
+                    </a>
+    
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+                        aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button> 
+    
+                    <!-- Navbar -->
+                    <div class="collapse navbar-collapse" id="navbarToggler">
+                        <div class="navbar-nav ml-auto">
+                            <a class="nav-item text-light nav-link" href="#">Home</a>
+                            <a class="nav-item text-light nav-link" href="#">Shopping Cart</a>
+    
+                            <div class="dropdown">
+                                <a class="nav-item text-light nav-link dropdown-toggle" data-toggle="dropdown" id="bookDropdown"
+                                    aria-haspopup="true" aria-expanded="false" href="#">Products by Category</a>
+                                <div class="dropdown-menu" aria-labelledby="bookDropdown">
+                                    <a class="dropdown-item" href="#">Face</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Cheeks</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Eyes</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Eyebrows</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Lips</a>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+    
+                </div>
+            </nav>
+            
+        <!-- Contains Fluid Jumbotron-->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Luxe Beauty</h1>
+            </div>
+          </div>
+        </header>
+    
+<main>
+    <h1 class="text-center">Estee Lauder, Double Wear Foundation</h1>
+    
+    <div class="container">
+      <div class="card">
+        <div class="container-fliud">
+          <div class="wrapper row">
+            <div class="preview col-md-6">
+              
+              <div class="preview-pic tab-content">
+                <div class="tab-pane active" id="pic-1"><img src="data:image/jpeg;base64,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" /></div>
+                <div class="tab-pane" id="pic-2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSo9zKqa75fdIyIoTBh9njoGH1R_LtTtT6fAQ&usqp=CAU" /></div>
+                <div class="tab-pane" id="pic-3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3OL6eFh4-Bn6DEJLs_uWzqA2NBfRIDH4t3g&usqp=CAU" /></div>
+                <div class="tab-pane" id="pic-4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSCcDwnw10A6R2OBD3o3Aq5OVEEUJIJiY0eDg&usqp=CAU" /></div>
+                <div class="tab-pane" id="pic-5"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRjg-T2-aQp1C7J2ztD5y5AkUt_AFFzkqU8GA&usqp=CAU" /></div>
+              </div>
+              <ul class="preview-thumbnail nav nav-tabs">
+                <li class="active"><a data-target="#pic-1" data-toggle="tab"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEBAPEA0NDQ0QDxAQDg8NDhANDQ8NFhEWFhYRFRUYHCkgGBolHxUVITEhMSkrOi4uFx8zOTMvNygtLisBCgoKDg0OGxAPGy4lICUrKy0vKy0uLjUtLS0tLy0tLS0tLS0tLS0tLSstLSstLS0tLS0tLS0tLS0tLS0tLSstLf/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAEAAQUBAAAAAAAAAAAAAAAABgECAwQFB//EAEgQAAIBAgMCBwsHCwQDAAAAAAABAgMRBBIhBTEiQVFhcXKxBgcTMjM1dIGRobIUIzRUs8HRFUJSYnOCkpOUwvAlRFOiQ2PD/8QAGQEBAQEBAQEAAAAAAAAAAAAAAAQBAwIF/8QAJxEBAAIBAwQBBAMBAAAAAAAAAAECEQMEMhIhMUEzQlFhcRMUIoH/2gAMAwEAAhEDEQA/APcQAAAAAAAAAAAAEZ7qO6eWFrUcNToxqVKsJVHOpJqEIqSitFrJt341uNvCYnEzinKpQjfip0JJ+2U2RTu7854X0R/bMlmzvEj0Eupe3XjLtFY6cs+Wq/8AcTXVhSXbFnE7qdqV8JQlVjiKs3FbnGgl9mSFEQ75X0Kp0M8XvaI8trETLF3Ed0uI2hBzlWq0+E1lXyea0dt/gkS5RqfWar6Y0fugea95p3oPrS7T08yt7d+5aIhrVq9ePi1Yt/8AspKS/wCrRz9jd0tSpjHgq1OnmdGdaFWlmjF5JQTi4Nv9NO9+I6GJInsd/wCt0/RMT8VI9aepbriMnTHTL0MAFjgAAAAAAAAAAAAAAAAAAAAAAAAAADzju9854X0V/aks2Y+BHoRE+7/zlhfRZfakp2U+Augh1flURwh0URDvl/QqnQyXoiHfK+hVOhnm/hlPKOd5fyD60u09RPLu8t5B9aXaeosV8z+3q7VxJEtkee6XouJ7aRLcSRLZHnul6Nie2mbp/JB9MvRQAXpgAAAAAAAAAAAAAAAAAAAAAAAAAAeb98LzlhPRZ/aolGyHwF0EX74fnHCejVPtUSbYz4C6CDV+VRXhDqoiPfJ+hVOhkuREu+T9CqdVmX8FOSM95X6O+tLtPUjy3vK+QfXl2nqbFfM/su1MVuIjsjz3S9GxP/zJditxEdkee6Xo+J/sGn8kN+mXowAPoJgAAAAAAAAAAAAAAAAAAAAAAAAAAeb98Xzjg/Rqn2sSR7EfAXQRvvjecMH6NV+0iSHYb4CINb5VNeEO0iJ98j6HU6rJZEiffI+h1OqzL8WU5Iz3lfIPrSPUmeWd5TyEuvI9TZtfM/sv6amK3ER2R56o+j4nsgS7FbmRDZHnqj+wxPZEzT+SG/TL0gAH0EwAAAAAAAAAAAAAAAAAAAAAAAAAAPNu+R5wwfo1b7SB3dhPgo4PfKdsfg293yetrxeUgdbYWJhlXDh/Ej5+v8qqkf4SWJFO+P8AQ6nVZJY4qn/yU/44/iRbvhVoSwlSMZwnJxdoxkpS9iMvPZlI7o53lPIS68j1NnlfeckqdGSqfNSzy0q/Nv2SPTni6X/LS/mR/E2J7z+y8d2HFbmRDY7/ANao/scT8MSUYrFU+KrTfROL+8iuxHm2zRa1XgsRdrVLgrjGn8kN+mXpYAPoJQAAAAAAAAAAAAAAAAAAAAAAAFlatGCcpyjCK3yk1FL1s5lTujwy0jN1HyQi+12Rxu6XESq1XTWlOlpb9Ko1q/Vu9pzaFBb+M56l+iuXuleqXdxPdDKWkKUVyOo83uX4kd2jhZYifhKs3OdrK9klHkSW5G6ooqfPvq3t5lZWsV8Q435Hj/iKfklHZKHLM/d16nG/JKKrZCOwVRuZ+51OVT2Wk003FpppxummtzTJFg9u14JKeWslxy4M/avwNOwynuupaviXO0RbzDtw7p6P58akHzLOvdr7jrYPF060c9OanHdpdNPkaeqIPXoJ25Todztd0auV+JVtF80/zX77es+jpW6q5RalemcJeADo8AAAAAAAAAAAAAAAAAAAAACI4+Hz1br/AHHPgzp4/wAtW6/3HL430ku64wo2/JfmGYtDPn5WKxldtaXyuzlfLH9Z2325OMx1ZpZIRTnUnfK5vLwYq8pSS0SS1sUz5W3bM7Wy/pXaVubj9gqpxSnUTcqWZt3hCnBbnbW79uvIbDnfMSsq1lFwSanKV5Na04xprWU229FoylKs87i23wKc9VltnTdrb1pbea+Hi8snNxjUq5Jy0zzjQv8ANxjF6JNpavkWhfB/OSVrJxjJ3eaTk3K8pPjbsvYbOI7eys92+pFVIxxLjIdF9zZw6+cp/tIfEjVRt0fHp/tIfEj6G14ItxyTAAFLgAAAAAAAAAAAAAAAAAAAAAIptHytXr/ccvjfSdTaXlqvXXYjlLeybdcHfb8lxRhp/wCNclx7Paj5q3spTTzKSV3C07br5WnYxVMPeKXCqWs8k0lCo1PMnUu9Xzpr7jJOHQ+XXc7219ZhlRXZ22+9G+Hma9XtbUbzTcot1JON2nFwjTWqin0ttvmRbBfOO9r5IaR1SV5WV+N7/cX+BXvsumzf3MyJJeq9/VvDYrEMsS4x51/i57FVNe6+57uX3MQ1lRt0/Gh14/EjURt098etHtR9Ha8UW45JgAClwAAAAAAAAAAAAAAAAAAAAAET2l5at1l2I5a3s6m0/LVusvhRy1vZNuuDvt+Sspa31WiXip/mKL6dxbJ77bm091t0Wn73cusLHzsrcLZa5ueTe5bvCKXr0KNaNcuX3TT+4vsVsDDHJaPo06U7r32vzFJLfzuT9t/xMthYGIYakb25vVvlBv4PeVUexLe+VvXm17TLYWGTC5G5R3x60e001uNzD74dMe1F+08Sk3HmEwABWmAAAAAAAAAAAAAAAAAAAAAET2p5et0r4Uctb2dXanl63TH4UcrjZPueDvoclwRr43E+DhnyuXCpwSVruU6kYLfzyRip7QjnnTmnTqQVOVnaSnGbkouDW/WElbfpu1TfzohblulTXWLg1dThJNRatJNPN4tnz8Rr0NqQnGlKOVup4O8VNNwU6cpp864LV+Oz5DcSzLoA1K20Kcac6uZSp045puLTtCybn0ZXmvxrcUePjnqU7SzU3ST0spOpLLHK+PXR8gxJmG2DXeOpJOXhIZYpSk76KDvafV4MuFu4L5GZKdeEnKMZxlKDSmotNwbV0nyO1n60ecS1m4jbwz1h0x7UahtYbxodMe1F209pNx6TIAFiYAAAAAAAAAAAAAAAAAAAAARXavl63TH4UcjjZ19reXrdMfhRyH4zJ9zwd9Dk1sXTjVi4Kdmp05Xi03GUKimrrphb2mCps6LqKvKbdaMoSjN6QioQqRUcv6Nq1XjveW/RWpLZ7zOaqKKcpNRcXKEXJtzaTejlfXivra7d64bBzjBwdacuDGKlo2/m0pPW71leW+9+MgzjxKz/AIthsyMd1SShwZSvl4U4zlPNe2ibk7rmVrcdlDZ1KVvnfC5adKndSjrSgqsY3y8bz1LvTdpaxn+RtKa8LLhqSd9VrKbV73/TS0t4qLZ7PfCyTyOSpqTyuUm45+Fdu9+FH+G3RufyY/DLhsFGEHBqMlKKhLgRg5wUbJStvdr+3cjFh9nRh4F+EqTlRjOF5SV6rlZuU7LV3TfFZtl0MHK8G6reS97XTm7xanJ338Gz5VJ8WjsqbObcpRqZZOaqRvBSjGrmfDte7eS0N+5c4z+TH4YI7FpqHgIzyKNOFJ5IwjOWHVOcIRqO3Ctmk1fS6vbffqYajkzat5pZne2/Ko6fwnNjsuabfymWttMitZV5VUt+60vB23Zb6K5keBmnC1XNCLtlnnfByRXCebhax/7e3JnPsjt6ddGzht8OmPajSoxyxjFycmopOUvGk0rXfObmHesOldpXtPabcek0ABYlAAAAAAAAAAAAAAAAAAAAAEW2t5at+78KONLxmdna3l6v7vwo49XxjhuI/wAO2hzYcTSzwnDThRlHVXWq4zSlhKislVUeG8qTtHLkmkoxto1dbnqo3OiYMXQc45VNw8bVXvrTlHifFmv6j5sThdMMMcLO0055s04uLk5StCM7pWfMlrxvfymGeGr2v4Z5krpRbd381fetW8tWyeizr1X/AJOs3KM7PXLeLaWtVxTV9VHwisv1fZT8nO3lZX1SaVrR4XBte1tY6WtwVpY9xP5ZhihGu0kqkYPwmuacnKSTm5QV43s042e9W3aa7FajO9NKrwlTalmqNSms1O70Vv3rcfOWfk56/OyV1LxVltKUptyVn+vb92PIHs+Tk5eFtfMoqMLZE5JprXelGKvzeoTMMxK14es43hXUs0ZWlKTtqqmSatG2mam9FrlN3C05Rvmk5Ntta3Vr8Stp0a7jDgsE6bu6kp8GMYp8GMUoQja1/wBS65M0uV33UeJl6iF5s0N8Osu1GqblJaw60e0u2kdplJuZ7wmgAK0wAAAAAAAAAAAAAAAAAAAAAi21vL1f3PgicjFKzR19qfSKv7nwRNWvhcy038R4vXqrMPVLdNsueC6WFmvzX6i35NP9FkH9e/2XfzU+6lymYvWDnyMfIp8hv9a7P56LMyGZF/yOfIWvCT5GZO1u3+egmXIsdCS4mUtJcT9h4nb3j02NWk+2Y3qe+HWj2o08PTcnu0N2Ss4daPai7b0mte6TXtE27JiADu4gAAAAAAAAAAAAAAAAAAAACMbS+kVeiHwxLqR0tr4FztUgrzWkluzQ/FHO8HVivJVfVBt+4C9pFrijFKtU/wCDEeqhUf3GN4mp9XxX9NVf9oGzbmKWNdYmp9XxXrw9Vf2lHXqfV8T/AE9X8ANhrmLXHmMHh6n1bFf09X8B4Wp9WxP8ip+AGbLzFPBrkMPhKn1bE/yKn4FYuo/9tiPXRkvuAzxpoxYiOsOsu1GWFOo//BVXTTaNrB7NnKpGU45IQeazteUuLcB3QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH//2Q==" /></a></li>
+                <li><a data-target="#pic-2" data-toggle="tab"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSo9zKqa75fdIyIoTBh9njoGH1R_LtTtT6fAQ&usqp=CAU" /></a></li>
+                <li><a data-target="#pic-3" data-toggle="tab"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT3OL6eFh4-Bn6DEJLs_uWzqA2NBfRIDH4t3g&usqp=CAU" /></a></li>
+                <li><a data-target="#pic-4" data-toggle="tab"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSCcDwnw10A6R2OBD3o3Aq5OVEEUJIJiY0eDg&usqp=CAU" /></a></li>
+                <li><a data-target="#pic-5" data-toggle="tab"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRjg-T2-aQp1C7J2ztD5y5AkUt_AFFzkqU8GA&usqp=CAU" /></a></li>
+              </ul>
+              
+            </div>
+            <div class="details col-md-6">
+              <h3 class="product-title">Estee Lauder Double Wear Foundation</h3>
+              <div class="rating">
+                <div class="stars">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <span class="review-no">46 reviews</span>
+              </div>
+              <p class="product-description">24-hour staying power. Flawless all day. This worry-free, long-wearing makeup stays fresh and looks natural through heat, humidity, nonstop activity. This foundation has a natural semi-matte finish. Transfer resistant. Feels lightweight and comfortable.
+                Now the flawless look you see in the morning is the look you keep all day.</p>
+              <h4 class="price">current price: <span>$60</span></h4>
+              <p class="vote"><strong>93%</strong> of customers enjoyed this product! <strong>(32 votes)</strong></p>
+              <h5 class="sizes">sizes:
+                <span class="size" data-toggle="tooltip" title="100ml">100ml</span>
+                <span class="size" data-toggle="tooltip" title="250ml">250ml</span>
+              </h5>
+              <h5 class="colors">colors:
+                <span class="color Fair not-available" data-toggle="tooltip" title="Not In store"></span>
+                <span class="color Tan"></span>
+                <span class="color Medium"></span>
+              </h5>
+              <div class="action">
+                <button class="add-to-cart btn btn-default" type="button">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>  
+
+</main>
+    <!-- Footer of the website -->
+    <footer class="footer">
+        <div class="text-center py-2 bg-secondary">
+            <span class="text-light">Copyright &copy; 2020</span>
+        </div>
+    </footer>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    </html>
