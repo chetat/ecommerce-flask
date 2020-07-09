@@ -81,6 +81,7 @@ def create_order():
             quantity=prod.quantity,
             user_id=user_id
         )
+        OrderProduct.insert(order_item)
     # Clear Cart after Order has been created
     try:
         num_rows_deleted = db.session.query(Cart).delete()
@@ -92,9 +93,32 @@ def create_order():
     return render_template("orders/order_complete.html",
                            ordered=order_products)
 
-# List all orders in db
+# List all user orders in db
 @bp.route("/orders", methods=['GET'])
+@login_required
 def get_orders():
-    orders = Order.query.all()
-    data = [order.serialize for order in orders]
-    return jsonify(data)
+    cart_items = Cart.query.filter_by(user_id=current_user.id).all()
+
+    orders = Order.query.filter_by(user_id=current_user.id).all()
+    orders_data = []
+    for order in orders:
+        order_prod = OrderProduct.query.filter_by(order_id=order.id).first()
+        if order_prod:
+            product = Product.query.filter_by(id=order_prod.product_id).first()
+            temp = {
+                "name": product.name,
+                "price": product.price,
+                "quantity": order_prod.quantity,
+                "order_date": order.order_date.strftime("%b %d %Y %H:%M"),
+                "total_amount": order.total_amount
+            }
+            orders_data.append(temp)
+            print(order.id)
+    print(orders_data)
+    return render_template("orders/orders.html",
+                           orders=orders_data, siz=len(orders_data))
+
+# Render Completion page
+@bp.route("/orders/complete")
+def completed_order():
+    return render_template("orders/order_complete.html")

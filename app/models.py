@@ -185,7 +185,7 @@ class Order(db.Model):
     def serialize(self):
         return {
             "id": self.id,
-            "order_date": self.order_date,
+            "order_date": self.order_date.strftime("%b %d %Y %H:%M"),
             "total_amount": self.total_amount,
             "products": [prod.serialize for prod in self.order_products]
 

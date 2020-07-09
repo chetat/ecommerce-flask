@@ -30,7 +30,7 @@
             {% if current_user.is_anonymous %}
                     <a class="nav-item text-light nav-link" href="{{url_for('bp.login')}}"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Login</a>
             {% else %}
-                <a class="nav-item text-light nav-link" href="{{url_for('bp.logout')}}">Hi, {{ current_user.email }} &nbsp;<i class="fa fa-user" aria-hidden="true"></i>&nbsp;Logout</a>
+                <a class="nav-item text-light nav-link" href="{{url_for('bp.logout')}}">Hi, {{ current_user.username }} &nbsp;<i class="fa fa-user" aria-hidden="true"></i>&nbsp;Logout</a>
             {% endif %}
                     
 
