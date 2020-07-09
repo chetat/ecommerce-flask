@@ -45,7 +45,7 @@ Type the following commands to start the server
 `export FLASK_ENV=development` //To run the app in debugging mode
 
 #### Migrations (If you want to setup a new Database)
- [Flask-Migrate Docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
+ [Flask-Migrate Docs](https://flask-migrate.readthedocs.io/en/latest/)
  - `flask db init`
  - `flask db migrate`
  - `flask db upgrade`
