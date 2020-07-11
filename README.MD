@@ -19,10 +19,10 @@
 - `database.db`
 -- The Actual project SQLite database
 
-**Getting Started**
-### Installing Dependencies
+**##Getting Started**
+#### Installing Dependencies
 
-- This following programs are required to run this project
+These following programs are required to run this project
 - ```Python 3.6 + ```
 - ```Pip 19+ ```
 
@@ -31,20 +31,24 @@ and [Pip docs](https://pip.pypa.io/en/stable/installing/) to install the latest 
 
 
 #### Requirements.txt
-install project dependencies by typing the following command
+install project dependencies by typing the following command:
+
 `pip install -r requirements.txt`
 
-## Setting environment variables
+### Setting environment variables
+
 Type the following commands to start the server
 
 ***On Bash***
 
 `export FLASK_APP=run.py` //Tell flask the file which contains flask instance
+
 `export FLASK_ENV=development` //To run the app in debugging mode
 
 ***On Windows Default Command-Line***
 
 `SET FLASK_APP=run.py`
+
 `SET FLASK_ENV=development`
 
  #### Running Server
