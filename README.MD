@@ -22,10 +22,13 @@
 **Getting Started**
 ### Installing Dependencies
 
-Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
 - This following programs are required to run this project
 - ```Python 3.6 + ```
 - ```Pip 19+ ```
+
+If you don't have python and pip installed, follow these instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
+and [Pip docs](https://pip.pypa.io/en/stable/installing/) to install the latest version of pip.
+
 
 #### Requirements.txt
 install project dependencies by typing the following command
