@@ -19,7 +19,7 @@
 - `database.db`
 -- The Actual project SQLite database
 
-**##Getting Started**
+**### Getting Started**
 #### Installing Dependencies
 
 These following programs are required to run this project
@@ -35,7 +35,7 @@ install project dependencies by typing the following command:
 
 `pip install -r requirements.txt`
 
-### Setting environment variables
+#### Setting environment variables
 
 Type the following commands to start the server
 
