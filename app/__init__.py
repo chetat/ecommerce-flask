@@ -1,13 +1,11 @@
 import dateutil.parser
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
 from app.config import Config
 from flask_login import LoginManager
 
 conf = Config()
 
-migrate = Migrate()
 sqlalchemy = SQLAlchemy()
 login = LoginManager()
 
@@ -19,7 +17,6 @@ def create_app(configuration):
 
     sqlalchemy.init_app(application)
 
-    migrate = Migrate(application, sqlalchemy)
     login.init_app(application)
     login.login_view = 'bp.login'
     register_blueprints(application)

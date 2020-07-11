@@ -10,48 +10,45 @@
 -- This folder contains application views such as `cart` , `categories`, `orders`, `users`, `products`
 - `config.py`
 -- This file contains application configurations
-- `models`
--- This files is where all application models are defined
+- `models.py`
+-- This file is where all application models are defined
 
 - `run.py`
 -- This is the application entry point
 
 - `database.db`
--- The Actual project database
+-- The Actual project SQLite database
 
 **Getting Started**
 ### Installing Dependencies
-
-#### Python 3.7
 
 Follow instructions to install the latest version of python for your platform in the [python docs](https://docs.python.org/3/using/unix.html#getting-and-installing-the-latest-version-of-python)
 - This following programs are required to run this project
 - ```Python 3.6 + ```
 - ```Pip 19+ ```
 
-
-#### Virtual Enviornment
-
-I recommend working within a virtual environment whenever using Python for projects. This keeps your dependencies for each project separate and organaized. Instructions for setting up a virual enviornment for your platform can be found in the [python docs](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
-
 #### Requirements.txt
-After the virtual environment setup, install project dependencies by typing the following command
-`pip install -r requirements`
-*NB* Make sure you are working withing the virtual environment setup above
+install project dependencies by typing the following command
+`pip install -r requirements.txt`
 
 ## Setting environment variables
 Type the following commands to start the server
-`export FLASK_APP=run.py`
+***On Bash***
+`export FLASK_APP=run.py` //Tell flask the file which contains flask instance
 `export FLASK_ENV=development` //To run the app in debugging mode
 
-#### Migrations (If you want to setup a new Database)
- [Flask-Migrate Docs](https://flask-migrate.readthedocs.io/en/latest/)
- - `flask db init`
- - `flask db migrate`
- - `flask db upgrade`
+***On Windows Default Command-Line***
+`SET FLASK_APP=run.py`
+`SET FLASK_ENV=development`
+
  #### Running Server
 
  `flask run`
+
+ #### Accessing the Store
+ After running the server, access the store home page using any browser
+ through the following url.
+ http://127.0.0.1:5000/store/
 
 
 

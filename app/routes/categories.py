@@ -1,8 +1,6 @@
 from flask import render_template, request, jsonify
 from . import bp
 from app.models import Category, Product, Cart
-from flask_login import login_user, logout_user, current_user, login_required
-
 
 """
 List all categories in database
