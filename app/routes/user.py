@@ -1,9 +1,9 @@
-from flask import (render_template, request, flash, redirect, url_for, jsonify)
+from flask import render_template, request, flash, redirect, url_for, jsonify
 from . import bp
 from flask_login import login_user, logout_user, current_user, login_required
 from app.forms import RegistrationForm, LoginForm
 from app.models import User
-
+from werkzeug.urls import url_parse
 
 # Define all routes to application
 @bp.route('/users/login', methods=['GET', 'POST'])
