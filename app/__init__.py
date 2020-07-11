@@ -9,7 +9,6 @@ conf = Config()
 sqlalchemy = SQLAlchemy()
 login = LoginManager()
 
-
 def create_app(configuration):
     application = Flask(__name__)
     # Set App Configuration
@@ -22,7 +21,6 @@ def create_app(configuration):
     register_blueprints(application)
 
     return application
-
 
 def register_blueprints(app):
     from app.routes import bp

@@ -4,6 +4,7 @@ from flask_login import login_user, logout_user, current_user, login_required
 from app.forms import RegistrationForm, LoginForm
 from app.models import User
 
+
 # Define all routes to application
 @bp.route('/users/login', methods=['GET', 'POST'])
 def login():

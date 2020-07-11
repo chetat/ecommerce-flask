@@ -3,8 +3,6 @@ from . import bp
 from app.models import Category, Product, Cart
 from flask_login import login_user, logout_user, current_user, login_required
 
-
-
 """
 List all user's cart items
 """
@@ -29,30 +27,6 @@ def view_cart_items():
     return render_template("cart/cart.html", cart_items=cart_products,
                            total=sum(total), siz=len(cart_products))
 
-
-
-"""# Define all routes to application
-@bp.route("/cart", methods=["GET"])
-def cart_page():
-    cart_items = Cart.query.all()
-
-    cart_products = []
-    for item in cart_items:
-        product = Product.query.filter_by(id=item.product_id).first()
-        cart_products.append({
-            "name": product.serialize["name"],
-            "id": product.serialize["id"],
-            "price": product.serialize["price"],
-            "image_url": product.serialize["image_url"],
-            "description": product.serialize["description"],
-            "quantity": item.quantity,
-            "subtotal": item.quantity * product.serialize["price"]
-
-        })
-    return jsonify(cart_products)
-    #return render_template("cart/cart.html", cart_items=cart_data)"""
-
-
 """
 Add Item to Cart and return all cart items
 """
@@ -76,7 +50,7 @@ def add_to_cart():
         print(e)
         return jsonify({
             "message": "could not add item to card"}), 500
-    cart_products = []
+
     cart_items = Cart.query.all()
 
     return jsonify({

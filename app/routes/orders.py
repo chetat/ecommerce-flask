@@ -1,4 +1,3 @@
-
 from flask import render_template, request, jsonify
 from . import bp
 from app.models import Cart, Category, Product, Order, OrderProduct, db, Address
@@ -97,8 +96,6 @@ def create_order():
 @bp.route("/orders", methods=['GET'])
 @login_required
 def get_orders():
-    cart_items = Cart.query.filter_by(user_id=current_user.id).all()
-
     orders = Order.query.filter_by(user_id=current_user.id).all()
     orders_data = []
     for order in orders:
