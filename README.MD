@@ -59,6 +59,7 @@ Type the following commands to start the server
 
  After running the server, access the store home page using any browser
  through the following url:
+ 
  http://127.0.0.1:5000/store/
 
 
